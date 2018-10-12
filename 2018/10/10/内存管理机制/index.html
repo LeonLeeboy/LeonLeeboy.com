@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     
-    <title>读《经济学的思维方式》前的想法 | Leon Lee</title>
+    <title>内存管理机制（一） | Leon Lee</title>
     <meta name="renderer" content="webkit">
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
@@ -15,11 +15,11 @@
     <meta name="description" content="一个栖息于繁杂世界幸福的人儿">
 
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="读《经济学的思维方式》前的想法 | Leon Lee">
+    <meta name="twitter:title" content="内存管理机制（一） | Leon Lee">
     <meta name="twitter:description" content="一个栖息于繁杂世界幸福的人儿">
 
     <meta property="og:type" content="article">
-    <meta property="og:title" content="读《经济学的思维方式》前的想法 | Leon Lee">
+    <meta property="og:title" content="内存管理机制（一） | Leon Lee">
     <meta property="og:description" content="一个栖息于繁杂世界幸福的人儿">
 
     
@@ -37,7 +37,7 @@
     <link rel="alternate" type="application/rss+xml" title="Leon Lee" href="/atom.xml">
     
 
-    <link rel="canonical" href="http://yoursite.com/2017/08/18/20170818/"/>
+    <link rel="canonical" href="http://yoursite.com/2018/10/10/内存管理机制/"/>
 
                  
 </head>
@@ -144,21 +144,37 @@
 
   <header class="post-header">
     <div class="post-meta">
-      <time datetime="2017-08-18T13:41:58.000Z" class="post-list__meta--date date">2017-08-18</time> &#8226; <span class="post-meta__tags tags">于&nbsp;
-  <a class="tag-link" href="/tags/碎碎念/">碎碎念</a>
+      <time datetime="2018-10-10T12:08:15.000Z" class="post-list__meta--date date">2018-10-10</time> &#8226; <span class="post-meta__tags tags">于&nbsp;
+  <a class="tag-link" href="/tags/蓄力仓/">蓄力仓</a>
  </span>
       <span class="page-pv">
       &nbsp;阅读&nbsp;<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>
       </span> 
    
     </div>
-    <h1 class="post-title">读《经济学的思维方式》前的想法</h1>
+    <h1 class="post-title">内存管理机制（一）</h1>
   </header>
 
   <section class="post">
-    <p>记录一下近期个人的精神状态，在上海这个魔都的氛围下，压力无时无刻不从四面八方渗透进我的躯体。只有当我锁起心来，才能在一定程度上感觉到一定的满足感。每当我感受到压力，而我却又手足无措之时，便会寻觅“身边的优秀人物”，再而从他们身上看能否窥探到一丝优秀在他们身上留下的一丝脚印。很幸运，貌似能窥见一斑，读一读他们读过的书，找一找属于自己味道的“road”。<br><br></p>
-<p>这本《经济学的思维方式》如果单从书名来看，按照我的性格是直接diss的。可读完一位博主的文章后，着实被里面的思考方式惊到了，一跺脚就入手了一本。希望在自己思考方式既定之前，给自己打磨打磨。抛开思维上的想法，我们都该给自己定一个短期的目标，在到达目的地之前，我们休息之余，是不是也可以对周边的未知地带进行一番摸索呢。或许不会摸索出一条新的路，但一定可以为到达原本的既定目标加一把动力。<br><br></p>
-<p>##以上##</p>
+    <embed src="//music.163.com/style/swf/widget.swf?sid=498904496&type=2&auto=1&width=320&height=66" width="340" height="86" allownetworking="all">
+
+<blockquote>
+<p>iOS 之所以如此流畅完全得益于内存管理做的如此出色。</p>
+</blockquote>
+<h3 id="什么是自动引用计数器？"><a href="#什么是自动引用计数器？" class="headerlink" title="什么是自动引用计数器？"></a>什么是自动引用计数器？</h3><blockquote>
+<p>自动引用计数器（Automic Reference Counting），对内存中的对象进行计数，从而管理对象的释放与否。（大于0 则不释放，等于0 则释放）</p>
+</blockquote>
+<h3 id="内存管理的思考方式"><a href="#内存管理的思考方式" class="headerlink" title="内存管理的思考方式"></a>内存管理的思考方式</h3><h4 id="思考方式"><a href="#思考方式" class="headerlink" title="思考方式"></a><strong><em>思考方式</em></strong></h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">1. 自己生成的对象，自己持有</div><div class="line">2. 非自己生成的对象，自己也能持有</div><div class="line">3. 不需要自己持有的对象时释放</div><div class="line">4. 非自己持有的对象，不能释放（崩溃）</div></pre></td></tr></table></figure>
+<h4 id="什么关键字自己持有"><a href="#什么关键字自己持有" class="headerlink" title="什么关键字自己持有"></a><strong><em>什么关键字自己持有</em></strong></h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">1. alloc</div><div class="line">2. new</div><div class="line">3. copy</div><div class="line">4. mutableCopy</div></pre></td></tr></table></figure>
+<h4 id="如何持有非自己生成的其他对象"><a href="#如何持有非自己生成的其他对象" class="headerlink" title="如何持有非自己生成的其他对象"></a><strong><em>如何持有非自己生成的其他对象</em></strong></h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">//非自己生成的对象，还未曾持有</div><div class="line">id obj = [NSMutableArray array];</div><div class="line">//持有对象</div><div class="line">[obj retain];</div><div class="line">//不需要时release</div><div class="line">[obj release];</div></pre></td></tr></table></figure>
+<h4 id="不能释放非自己持有的对象"><a href="#不能释放非自己持有的对象" class="headerlink" title="不能释放非自己持有的对象"></a><strong><em>不能释放非自己持有的对象</em></strong></h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">//非自己生成的对象，还未曾持有</div><div class="line">id obj = [NSMutableArray array];</div><div class="line">[obj release]; // 崩溃</div></pre></td></tr></table></figure>
+<h3 id="AutoRelease"><a href="#AutoRelease" class="headerlink" title="AutoRelease"></a>AutoRelease</h3><h4 id="AutoRelease的本质"><a href="#AutoRelease的本质" class="headerlink" title="AutoRelease的本质"></a><strong><em>AutoRelease的本质</em></strong></h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">我们可以类比是类似C语言的自动变量</div><div class="line">&#123;</div><div class="line">    *******</div><div class="line">&#125;</div><div class="line">当到括号结束的时候自动释放里面的局部变量。只不过我们这里释放的是对象。</div></pre></td></tr></table></figure>
+<h4 id="AutoRelease的用法"><a href="#AutoRelease的用法" class="headerlink" title="AutoRelease的用法"></a><strong><em>AutoRelease的用法</em></strong></h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">NSAutoReleasePool *pool = [[NSAutoReleaseTool alloc] init];</div><div class="line">id obj = [[NSObject alloc] init];</div><div class="line">[obj autorelease];</div><div class="line">[pool drain];</div></pre></td></tr></table></figure>
+<h4 id="AutoRelease-可能会导致的问题"><a href="#AutoRelease-可能会导致的问题" class="headerlink" title="AutoRelease 可能会导致的问题"></a><strong><em>AutoRelease 可能会导致的问题</em></strong></h4><blockquote>
+<ol>
+<li>因为会注册到autoreleasePool 中，如果在pool 中，生成的对象过多会导致内存的压力，而且object 不会立即释放。会等到Pool释放时才会调用Release 方法。</li>
+</ol>
+</blockquote>
 
   </section>
 
