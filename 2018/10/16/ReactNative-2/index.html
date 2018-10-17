@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     
-    <title>Leon Lee | 偏执、单调、极致</title>
+    <title>ReactNative (二) | Leon Lee</title>
     <meta name="renderer" content="webkit">
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
@@ -15,11 +15,11 @@
     <meta name="description" content="一个栖息于繁杂世界幸福的人儿">
 
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Leon Lee | 偏执、单调、极致">
+    <meta name="twitter:title" content="ReactNative (二) | Leon Lee">
     <meta name="twitter:description" content="一个栖息于繁杂世界幸福的人儿">
 
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Leon Lee | 偏执、单调、极致">
+    <meta property="og:title" content="ReactNative (二) | Leon Lee">
     <meta property="og:description" content="一个栖息于繁杂世界幸福的人儿">
 
     
@@ -37,7 +37,7 @@
     <link rel="alternate" type="application/rss+xml" title="Leon Lee" href="/atom.xml">
     
 
-    <link rel="canonical" href="http://yoursite.com"/>
+    <link rel="canonical" href="http://yoursite.com/2018/10/16/ReactNative-2/"/>
 
                  
 </head>
@@ -140,74 +140,57 @@
 
     <div class="content-wrapper">
         <div class="content-wrapper__inner">
-            <div class="main-post-list">
-    
-  <ol class="post-list">
-  
-    
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2018/10/16/ReactNative-2/" title="link to post.title">ReactNative (二)</a></h2>
-      <p class="excerpt">
-    
-      ReactNative 如何调试？这里仅仅讨论在Mac 情况下，编译跑iOS的情况
+            <article class="post-container post-container--single">
 
-在保证RN正常编译的情况下：121.下载chrome2.在终端运行 react-native run-iOS //Terminal运行
-
-运行react-native run-iOS  会调用起另一个终端起一个代理：
-如何dubug？1点击第二个 Debug JS Remotely , 然后chrome 会出现如
-    &hellip;
-      </p>
-      <div class="post-list__meta"><time datetime="2018-10-16T14:11:29.000Z" class="post-list__meta--date date">2018-10-16</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="2018-10-16T14:11:29.000Z" class="post-list__meta--date date">2018-10-16</time> &#8226; <span class="post-meta__tags tags">于&nbsp;
   <a class="tag-link" href="/tags/蓄力仓/">蓄力仓</a>
-</span><a class="btn-border-small" href="/2018/10/16/ReactNative-2/">继续阅读</a></div>
-      <hr class="post-list__divider" />
-    </li>
-  
-    
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2018/10/10/内存管理机制/" title="link to post.title">内存管理机制（一）</a></h2>
-      <p class="excerpt">
-    
-      
+ </span>
+      <span class="page-pv">
+      &nbsp;阅读&nbsp;<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>
+      </span> 
+   
+    </div>
+    <h1 class="post-title">ReactNative (二)</h1>
+  </header>
 
+  <section class="post">
+    <h3 id="ReactNative-如何调试？"><a href="#ReactNative-如何调试？" class="headerlink" title="ReactNative 如何调试？"></a>ReactNative 如何调试？</h3><p><code>这里仅仅讨论在Mac 情况下，编译跑iOS的情况</code></p>
+<blockquote>
+<p>在保证RN正常编译的情况下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">1.下载chrome</div><div class="line">2.在终端运行 react-native run-iOS //Terminal运行</div></pre></td></tr></table></figure></p>
+</blockquote>
+<h4 id="运行react-native-run-iOS-会调用起另一个终端起一个代理："><a href="#运行react-native-run-iOS-会调用起另一个终端起一个代理：" class="headerlink" title="运行react-native run-iOS  会调用起另一个终端起一个代理："></a>运行react-native run-iOS  会调用起另一个终端起一个代理：</h4><p><img src="http://ozcj9eg4v.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-10-17%20%E4%B8%8B%E5%8D%8810.22.17.png" alt="代理"></p>
+<h4 id="如何dubug？"><a href="#如何dubug？" class="headerlink" title="如何dubug？"></a>如何dubug？</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">点击第二个 Debug JS Remotely , 然后chrome 会出现如下图像</div></pre></td></tr></table></figure>
+<p><img src="http://ozcj9eg4v.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-10-17%20%E4%B8%8B%E5%8D%8810.23.07.png" alt="debug-1"></p>
+<p><img src="http://ozcj9eg4v.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-10-17%20%E4%B8%8B%E5%8D%8810.36.46.png" alt="debug-1"></p>
+<h4 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h4><blockquote>
+<p>实际上通过react-native run-ios 通过服务器启一个本地服务器，实现simulator和chrome之间的联调，而我们编辑js代码 我个人用的是webStorm。</p>
+</blockquote>
 
-iOS 之所以如此流畅完全得益于内存管理做的如此出色。
+  </section>
 
-什么是自动引用计数器？
-自动引用计数器（Automic Reference Counting），对内存中的对象进行计数，从而管理对象的释放与否。（大于0 则不释放，等于0 则释放）
+</article>
 
-内存管理的思考方式思考方式12341. 自己生成的对象，自己持有2. 非自己生成的对象，自己也能持有3. 不需要自己持有的对象时释放4. 非自己持有的对
-    &hellip;
-      </p>
-      <div class="post-list__meta"><time datetime="2018-10-10T12:08:15.000Z" class="post-list__meta--date date">2018-10-10</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;
-  <a class="tag-link" href="/tags/蓄力仓/">蓄力仓</a>
-</span><a class="btn-border-small" href="/2018/10/10/内存管理机制/">继续阅读</a></div>
-      <hr class="post-list__divider" />
-    </li>
-  
-    
-  </ol>
+<div id="lv-container" data-id="city" data-uid="MTAyMC8zMDE0MS82Njk2">
+<script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
 
+       if (typeof LivereTower === 'function') { return; }
 
- <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
-        tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno",skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']},
-        TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}" } },
-        messageStyle: "none"
-    }); 
-    
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
 </script>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for(i=0; i < all.length; i += 1) {
-            all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-    });
-</script>
-<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
+<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
 </div>
+
+
+  
 
 
             <footer class="footer">
