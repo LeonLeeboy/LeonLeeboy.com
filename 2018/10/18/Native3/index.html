@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     
-    <title>Leon Lee | 偏执、单调、极致</title>
+    <title>React Native（三） 常见错误 | Leon Lee</title>
     <meta name="renderer" content="webkit">
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
@@ -15,11 +15,11 @@
     <meta name="description" content="一个栖息于繁杂世界幸福的人儿">
 
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Leon Lee | 偏执、单调、极致">
+    <meta name="twitter:title" content="React Native（三） 常见错误 | Leon Lee">
     <meta name="twitter:description" content="一个栖息于繁杂世界幸福的人儿">
 
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Leon Lee | 偏执、单调、极致">
+    <meta property="og:title" content="React Native（三） 常见错误 | Leon Lee">
     <meta property="og:description" content="一个栖息于繁杂世界幸福的人儿">
 
     
@@ -37,7 +37,7 @@
     <link rel="alternate" type="application/rss+xml" title="Leon Lee" href="/atom.xml">
     
 
-    <link rel="canonical" href="http://yoursite.com"/>
+    <link rel="canonical" href="http://yoursite.com/2018/10/18/Native3/"/>
 
                  
 </head>
@@ -140,91 +140,58 @@
 
     <div class="content-wrapper">
         <div class="content-wrapper__inner">
-            <div class="main-post-list">
-    
-  <ol class="post-list">
-  
-    
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2018/10/18/Native3/" title="link to post.title">React Native（三） 常见错误</a></h2>
-      <p class="excerpt">
-    
-      ##常见问题解决
-如何升级RN？
-https://reactnative.cn/docs/0.50/upgrading.html//个人建议用老方法升级，万一项目里面package.json 里面dependency全是手动设置的version，不太好升级。
+            <article class="post-container post-container--single">
 
-如何查看已经过期的第三方1npm outdated
-如果出现RCT／RCT*.h  Not Found如何处理1231.确保项目的正常初始
-    &hellip;
-      </p>
-      <div class="post-list__meta"><time datetime="2018-10-18T13:55:09.000Z" class="post-list__meta--date date">2018-10-18</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;</span><a class="btn-border-small" href="/2018/10/18/Native3/">继续阅读</a></div>
-      <hr class="post-list__divider" />
-    </li>
-  
-    
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2018/10/16/ReactNative-2/" title="link to post.title">ReactNative (二)</a></h2>
-      <p class="excerpt">
-    
-      ReactNative 如何调试？这里仅仅讨论在Mac 情况下，编译跑iOS的情况
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="2018-10-18T13:55:09.000Z" class="post-list__meta--date date">2018-10-18</time> &#8226; <span class="post-meta__tags tags">于&nbsp; </span>
+      <span class="page-pv">
+      &nbsp;阅读&nbsp;<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>
+      </span> 
+   
+    </div>
+    <h1 class="post-title">React Native（三） 常见错误</h1>
+  </header>
 
-在保证RN正常编译的情况下：121.下载chrome2.在终端运行 react-native run-iOS //Terminal运行
+  <section class="post">
+    <p>##常见问题解决</p>
+<h3 id="如何升级RN？"><a href="#如何升级RN？" class="headerlink" title="如何升级RN？"></a>如何升级RN？</h3><blockquote>
+<p><a href="https://reactnative.cn/docs/0.50/upgrading.html" target="_blank" rel="external">https://reactnative.cn/docs/0.50/upgrading.html</a><br>//个人建议用老方法升级，万一项目里面package.json 里面dependency全是手动设置的version，不太好升级。</p>
+</blockquote>
+<h3 id="如何查看已经过期的第三方"><a href="#如何查看已经过期的第三方" class="headerlink" title="如何查看已经过期的第三方"></a>如何查看已经过期的第三方</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm outdated</div></pre></td></tr></table></figure>
+<h3 id="如果出现RCT／RCT-h-Not-Found如何处理"><a href="#如果出现RCT／RCT-h-Not-Found如何处理" class="headerlink" title="如果出现RCT／RCT*.h  Not Found如何处理"></a>如果出现RCT<strong><em>／RCT*</em></strong>.h  Not Found如何处理</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">1.确保项目的正常初始化</div><div class="line">- 首先`npm install `， 不过我们一般为了提高效率会提前安装yarn，直接执行`yarn install`//此步是为了安装node_module</div><div class="line">- cd iOS 文件夹，然后看有没有pod，有就pod install // 切记这两个顺序的重要性（一般情况下这种not found的问题就会解决）。</div></pre></td></tr></table></figure>
+<h3 id="有时候偶尔会出现-a-文件not-found"><a href="#有时候偶尔会出现-a-文件not-found" class="headerlink" title="有时候偶尔会出现 **.a 文件not found"></a>有时候偶尔会出现 <em>**</em>.a 文件not found</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">一般情况下，先删除原来引用.a 的地方，再重新引入。</div></pre></td></tr></table></figure>
+<h3 id="为什么有时候我们copy的RN-项目跑不起来"><a href="#为什么有时候我们copy的RN-项目跑不起来" class="headerlink" title="为什么有时候我们copy的RN 项目跑不起来"></a>为什么有时候我们copy的RN 项目跑不起来</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">上面的第二个问题的解决方案可以解决大部分情况。</div></pre></td></tr></table></figure>
+<h3 id="更新npm-的命令是啥"><a href="#更新npm-的命令是啥" class="headerlink" title="更新npm 的命令是啥"></a>更新npm 的命令是啥</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm i -g npm</div></pre></td></tr></table></figure>
+<h3 id="如何更新yarn"><a href="#如何更新yarn" class="headerlink" title="如何更新yarn"></a>如何更新yarn</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g yarn</div></pre></td></tr></table></figure>
+<h3 id="用react-native-run-ios-出现compile-architecture-问题"><a href="#用react-native-run-ios-出现compile-architecture-问题" class="headerlink" title="用react-native run-ios 出现compile ** architecture 问题"></a>用react-native run-ios 出现compile <strong><em>**</em></strong> architecture 问题</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">用Xcode 打开查看对应的具体的情况，这个坑还在填补中。</div></pre></td></tr></table></figure>
+<h3 id="React-native-version-mispatch"><a href="#React-native-version-mispatch" class="headerlink" title="React native version mispatch"></a>React native version mispatch</h3><blockquote>
+<p>solution: close all terminal ,and then rebuild. （当我们本地有多个RN项目，且各个RN版本不一样的时候，我们还开了多个terminal 来运行多个项目，这时候就可能造成conflict）</p>
+</blockquote>
 
-运行react-native run-iOS  会调用起另一个终端起一个代理：
-如何dubug？1点击第二个 Debug JS Remotely , 然后chrome 会出现如
-    &hellip;
-      </p>
-      <div class="post-list__meta"><time datetime="2018-10-16T14:11:29.000Z" class="post-list__meta--date date">2018-10-16</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;
-  <a class="tag-link" href="/tags/蓄力仓/">蓄力仓</a>
-</span><a class="btn-border-small" href="/2018/10/16/ReactNative-2/">继续阅读</a></div>
-      <hr class="post-list__divider" />
-    </li>
-  
-    
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2018/10/10/内存管理机制/" title="link to post.title">内存管理机制（一）</a></h2>
-      <p class="excerpt">
-    
-      
+  </section>
 
+</article>
 
-iOS 之所以如此流畅完全得益于内存管理做的如此出色。
+<div id="lv-container" data-id="city" data-uid="MTAyMC8zMDE0MS82Njk2">
+<script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
 
-什么是自动引用计数器？
-自动引用计数器（Automic Reference Counting），对内存中的对象进行计数，从而管理对象的释放与否。（大于0 则不释放，等于0 则释放）
+       if (typeof LivereTower === 'function') { return; }
 
-内存管理的思考方式思考方式12341. 自己生成的对象，自己持有2. 非自己生成的对象，自己也能持有3. 不需要自己持有的对象时释放4. 非自己持有的对
-    &hellip;
-      </p>
-      <div class="post-list__meta"><time datetime="2018-10-10T12:08:15.000Z" class="post-list__meta--date date">2018-10-10</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;
-  <a class="tag-link" href="/tags/蓄力仓/">蓄力仓</a>
-</span><a class="btn-border-small" href="/2018/10/10/内存管理机制/">继续阅读</a></div>
-      <hr class="post-list__divider" />
-    </li>
-  
-    
-  </ol>
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
 
-
- <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
-        tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno",skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']},
-        TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}" } },
-        messageStyle: "none"
-    }); 
-    
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
 </script>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for(i=0; i < all.length; i += 1) {
-            all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-    });
-</script>
-<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
+<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
 </div>
+
+
+  
 
 
             <footer class="footer">
